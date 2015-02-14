@@ -18,7 +18,7 @@
 		  @else
         <ul class="list-unstyled">
             @foreach( $project->tasks as $task )
-                <li>
+                <li data-id="{{ $task->id }}">
                 		<div class="panel panel-default">
                     	<div class="panel-body">
                     	{!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('projects.tasks.destroy', $project->slug, $task->slug))) !!}  			
