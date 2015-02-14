@@ -13,26 +13,29 @@ $(function(){
 
 			// Init timer resume	
 			$('.resume-timer-btn').on('click', function() {
-				$('.timer').timer('resume');
+				id = '#' + $(this).attr('data-id');
+				$(id).timer('resume');
 				$(this).addClass('hidden');
-				$('.pause-timer-btn, .remove-timer-btn').removeClass('hidden');
+				$(this).siblings('.pause-timer-btn, .remove-timer-btn').removeClass('hidden');
 			});
 
 
 			// Init timer pause
 			$('.pause-timer-btn').on('click', function() {
-				$('.timer').timer('pause');
+				id = '#' + $(this).attr('data-id');
+				$(id).timer('pause');
 				$(this).addClass('hidden');
-				$('.resume-timer-btn').removeClass('hidden');
+				$(this).siblings('.resume-timer-btn').removeClass('hidden');
 			});
 
 			// Remove timer
 			$('.remove-timer-btn').on('click', function() {
 				hasTimer = false;
-				$('.timer').timer('remove');
+				id = '#' + $(this).attr('data-id');
+				$(id).timer('remove');
 				$(this).addClass('hidden');
-				$('.start-timer-btn').removeClass('hidden');
-				$('.pause-timer-btn, .resume-timer-btn').addClass('hidden');
+				$(this).('.start-timer-btn').removeClass('hidden');
+				$(this).siblings('.pause-timer-btn, .resume-timer-btn').addClass('hidden');
 			});
 
 			// Additional focus event for this
