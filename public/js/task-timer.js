@@ -3,11 +3,12 @@ $(function(){
 			// Init timer start
 			$('.start-timer-btn').on('click', function() {
 				hasTimer = true;
-				$('.timer').timer({
+				id = '#' + $(this).attr('data-id');
+				$(id).timer({
 					editable: true
 				});
 				$(this).addClass('hidden');
-				$('.pause-timer-btn, .remove-timer-btn').removeClass('hidden');
+				$(this).siblings('.pause-timer-btn, .remove-timer-btn').removeClass('hidden');
 			});
 
 			// Init timer resume	

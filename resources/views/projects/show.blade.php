@@ -29,12 +29,12 @@
                        		Due: XX days
                        	</p>
                         <div id="project-info" class="pull-right">
-														<input type="text" type="timer"name="timer" class="form-control timer" placeholder="0 sec">
+														<input type="text" id='Task{{ $task->id }}' type="timer"name="timer" class="form-control timer" placeholder="0 sec">
 														
-															<div class="btn btn-sm btn-warning start-timer-btn"><i class="fa fa-clock-o"></i></div>
-															<div class="btn btn-sm btn-primary resume-timer-btn hidden"><i class="fa fa-clock-o"></i></div>
-															<div class="btn btn-sm btn-warning pause-timer-btn hidden"><i class="fa fa-pause"></i></div>
-															<button type="submit" class="btn btn-sm btn-danger remove-timer-btn hidden">Save Timer</button>
+															<div class="btn btn-sm btn-warning start-timer-btn" data-id='Task{{ $task->id }}'><i class="fa fa-clock-o"></i></div>
+															<div class="btn btn-sm btn-primary resume-timer-btn hidden" data-id='Task{{ $task->id }}'><i class="fa fa-clock-o"></i></div>
+															<div class="btn btn-sm btn-warning pause-timer-btn hidden" data-id='Task{{ $task->id }}'><i class="fa fa-pause"></i></div>
+															<button type="submit" class="btn btn-sm btn-danger remove-timer-btn hidden" data-id='Task{{ $task->id }}'>Save Timer</button>
 										
 										
                         		<div class="btn btn-sm btn-info">
