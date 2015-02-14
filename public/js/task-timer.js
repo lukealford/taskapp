@@ -34,7 +34,7 @@ $(function(){
 				id = '#' + $(this).attr('data-id');
 				$(id).timer('remove');
 				$(this).addClass('hidden');
-				$(this).('.start-timer-btn').removeClass('hidden');
+				$(this).siblings('.start-timer-btn').removeClass('hidden');
 				$(this).siblings('.pause-timer-btn, .resume-timer-btn').addClass('hidden');
 			});
 
