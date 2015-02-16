@@ -30,6 +30,8 @@ Route::bind('projects', function($value, $route) {
 Route::resource('projects', 'ProjectsController');
 Route::resource('projects.tasks', 'TasksController');
 
+Route::resource('projects.tasks.time', 'TasksTimeController');
+
 Route::filter('auth', function()
 {
     if (Auth::guest()) return Redirect::guest('login');

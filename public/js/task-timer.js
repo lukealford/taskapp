@@ -53,4 +53,32 @@ $(function(){
 					$('.resume-timer-btn').addClass('hidden');
 				}
 			});
+
+			$('.task-timer').submit(function(event) {
+
+			 var formData = {
+            'Task_time'              : $('input[name=timer]').val()
+
+        };
+
+        // process the form
+        $.ajax({
+            data        : formData, // our data object
+            dataType    : 'json', // what type of data do we expect back from the server
+                        encode          : true
+        })
+            // using the done promise callback
+            .done(function(data) {
+
+                // log data to the console so we can see
+                console.log(data); 
+
+                // here we will handle errors and validation messages
+            });
+
+        // stop the form from submitting the normal way and refreshing the page
+        event.preventDefault();
+         });
+
+
  });

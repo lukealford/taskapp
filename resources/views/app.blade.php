@@ -92,6 +92,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	{!! HTML::script('/js/timer.jquery.js') !!}
-{!! HTML::script('/js/task-timer.js') !!}
+	{!! HTML::script('/js/task-timer.js') !!}
+
 </body>
 </html>
